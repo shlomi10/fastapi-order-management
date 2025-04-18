@@ -36,10 +36,15 @@ jobs:
         pip install -r requirements.txt
         pip install allure-pytest requests
 
-    - name: Install Allure CLI
+    - name: Install Allure CLI via Homebrew
       run: |
-        sudo apt-get update
-        sudo apt-get install -y allure
+        sudo apt-get install -y curl
+        curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+        echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $GITHUB_ENV
+        eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+        brew install allure
+        allure --version
+  
 
     - name: Wait for MongoDB to be healthy
       run: |
