@@ -46,6 +46,18 @@ jobs:
         echo "Waiting for MongoDB..."
         sleep 15
 
+    - name: Start FastAPI server
+      run: |
+        uvicorn main:app --host 0.0.0.0 --port 8000 &
+      env:
+        MONGO_URI: mongodb://localhost:27017
+        DB_NAME: oms_db
+
+    - name: Wait for FastAPI to be ready
+      run: |
+        echo "Waiting for FastAPI server..."
+        sleep 10
+
     - name: Run API tests and collect Allure results
       env:
         MONGO_URI: mongodb://localhost:27017
