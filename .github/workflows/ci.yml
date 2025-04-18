@@ -51,7 +51,7 @@ jobs:
         uvicorn main:app --host 0.0.0.0 --port 8000 &
       env:
         MONGO_URI: mongodb://localhost:27017
-        DB_NAME: oms_db
+        DB_NAME: ecommerce
 
     - name: Wait for FastAPI to be ready
       run: |
@@ -61,7 +61,7 @@ jobs:
     - name: Run API tests and collect Allure results
       env:
         MONGO_URI: mongodb://localhost:27017
-        DB_NAME: oms_db
+        DB_NAME: ecommerce
       run: |
         pytest tests/ --alluredir=allure-results
 
