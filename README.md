@@ -12,7 +12,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-green.svg?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-blue.svg?style=for-the-badge&logo=docker)](https://docs.docker.com/compose/)
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/shlomi10/fastapi-order-management/ci.yml?branch=main&label=CI%20Build&style=for-the-badge&logo=github-actions)](https://github.com/shlomi10/fastapi-order-management/actions)
-[![Allure Report](https://img.shields.io/badge/Allure-Report-orange.svg?style=for-the-badge&logo=junit5)](https://docs.qameta.io/allure/)
+[![Allure Report](https://img.shields.io/badge/Allure-View%20Report-orange?style=for-the-badge)](https://shlomi10.github.io/fastapi-order-management/)
 
 </div>
 
@@ -131,6 +131,12 @@ pytest tests/ --alluredir=allure-results
 allure serve allure-results
 ```
 
+3. View the latest test results:
+
+```
+https://shlomi10.github.io/fastapi-order-management/
+```
+
 ## 📦 API Endpoints
 
 | Method | URL | Description |
@@ -150,7 +156,8 @@ Every push to the main branch triggers GitHub Actions to:
 - **Run tests**
 - **Collect and upload Allure reports**
 
-**[View GitHub Actions](https://github.com/shlomi10/fastapi-order-management/actions)**
+**[View GitHub Actions](https://github.com/shlomi10/fastapi-order-management/actions)**  
+**[View Latest Test Reports](https://shlomi10.github.io/fastapi-order-management/)**
 
 ## 🗺️ Architecture Diagram
 
@@ -218,6 +225,7 @@ SOFTWARE.
 | **Stop services** | `docker-compose down` |
 | **Run tests** | `pytest tests/ --alluredir=allure-results` |
 | **Serve Allure report** | `allure serve allure-results` |
+| **View published reports** | `https://shlomi10.github.io/fastapi-order-management/` |
 
 ---
 
