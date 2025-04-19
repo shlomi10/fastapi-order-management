@@ -3,12 +3,12 @@
 <div align="center">
 
 **[Python 3.12](https://www.python.org/)** &nbsp;|&nbsp;
-**[FastAPI 0.110](https://fastapi.tiangolo.com/)** &nbsp;|&nbsp;
+**[FastAPI 0.115.12](https://fastapi.tiangolo.com/)** &nbsp;|&nbsp;
 **[MongoDB 6.0](https://www.mongodb.com/)** &nbsp;|&nbsp;
 **[Docker Compose](https://docs.docker.com/compose/)**
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green.svg?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.12-green.svg?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0-green.svg?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-blue.svg?style=for-the-badge&logo=docker)](https://docs.docker.com/compose/)
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/shlomi10/fastapi-order-management/ci.yml?branch=main&label=CI%20Build&style=for-the-badge&logo=github-actions)](https://github.com/shlomi10/fastapi-order-management/actions)
