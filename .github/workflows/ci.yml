@@ -82,3 +82,12 @@ jobs:
       with:
         name: allure-html-report
         path: allure-report
+
+    - name: Publish Allure Report to GitHub Summary
+      uses: simple-elf/allure-report-action@v1.8
+      with:
+        results_dir: allure-results
+        report_dir: allure-report
+        gh_pages: false
+
+
