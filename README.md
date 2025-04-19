@@ -92,7 +92,7 @@ pip install allure-pytest
 At the root of the project, create a `.env` file:
 
 ```
-MONGO_URI=mongodb://mongo:27017
+MONGO_URI=mongodb://localhost:27017
 DB_NAME=ecommerce
 ```
 
