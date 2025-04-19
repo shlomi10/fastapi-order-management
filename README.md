@@ -107,6 +107,31 @@ This will:
 - **Start the MongoDB service**
 - **Connect them via Docker network**
 
+## 🐳 Docker Hub
+
+A pre-built Docker image is available on Docker Hub:
+
+```bash
+# Pull the image
+docker pull shlomi10/fastapi-order-management:latest
+```
+
+You can use this image directly instead of building locally:
+
+```bash
+# Run with the pre-built image
+docker run -p 8000:8000 --env-file .env shlomi10/fastapi-order-management:latest
+```
+
+Or with docker-compose by updating your docker-compose.yml file:
+
+```yaml
+version: '3'
+services:
+  app:
+    image: shlomi10/fastapi-order-management:latest
+```
+
 ### Step 6: Access the Application
 
 Once running, open the Swagger UI:
@@ -226,6 +251,7 @@ SOFTWARE.
 | **Run tests** | `pytest tests/ --alluredir=allure-results` |
 | **Serve Allure report** | `allure serve allure-results` |
 | **View published reports** | `https://shlomi10.github.io/fastapi-order-management/` |
+| **Pull Docker image** | `docker pull shlomi10/fastapi-order-management:latest` |
 
 ---
 
