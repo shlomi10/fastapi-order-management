@@ -112,7 +112,7 @@ This will:
 A pre-built Docker image is available on Docker Hub:
 
 ```bash
-# Pull the image
+# Pull the imagedocker
 docker pull shlomi10/fastapi-order-management:latest
 ```
 
@@ -201,6 +201,12 @@ Every push to the main branch triggers GitHub Actions to:
 +----------+-------------+
 |      MongoDB           |
 |  (Docker Container)    |
++------------------------+
+           |
+           v
++----------+-------------+
+|   Automation Tests     |
+|  (Report By Allure)    |
 +------------------------+
 ```
 
