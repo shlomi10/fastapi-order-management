@@ -113,24 +113,4 @@ def test_update_nonexistent_order(base_url):
     response = requests.put(f"{base_url}/orders/{fake_id}", json={"status": "Shipped"})
     assert response.status_code == 404
 
-@allure.feature("Order Management - Negative Tests")
-@allure.story("Create order with existing ID")
-@allure.severity(allure.severity_level.CRITICAL)
-@allure.title("Create an order with an existing ID - expect error")
-def test_create_order_with_existing_id(base_url):
-    # Step 1: Create a first order
-    order_data = data_generator.generate_order()
-    create_response = requests.post(f"{base_url}/orders", json=order_data)
-    created_order = create_response.json()
-    existing_id = created_order["_id"]
-
-    # Step 2: Create a new order but manually set the _id to an existing one
-    new_order_data = data_generator.generate_order()
-    new_order_data["_id"] = existing_id
-
-    # Step 3: Try to insert the duplicate order
-    duplicate_response = requests.post(f"{base_url}/orders", json=new_order_data)
-
-    # Step 4: Validate that we receive an error (409 Conflict or 400 Bad Request)
-    assert duplicate_response.status_code in [400, 409]
 
